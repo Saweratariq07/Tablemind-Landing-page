@@ -150,7 +150,7 @@ export default function Waitlist({ onBookDemo }) {
 
         {/* CTA banner */}
         <Reveal delay={120}>
-          <div className="relative rounded-2xl overflow-hidden h-full min-h-[320px] flex items-end p-7 sm:p-8 shadow-card border border-espresso/8">
+          <div className="relative rounded-2xl overflow-hidden h-full min-h-[280px] sm:min-h-[320px] flex items-end p-6 sm:p-8 shadow-card border border-espresso/8">
             <img
               src="/hero-restaurant.jpg"
               alt="Restaurant Interior"

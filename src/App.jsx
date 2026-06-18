@@ -18,7 +18,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-cream text-espresso">
+    <div className="min-h-screen bg-cream text-espresso overflow-x-hidden">
       <Navbar onBookDemo={() => setDemoOpen(true)} />
       <main>
         <Hero onBookDemo={() => setDemoOpen(true)} onJoinWaitlist={scrollToWaitlist} />

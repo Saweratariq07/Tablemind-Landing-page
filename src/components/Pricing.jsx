@@ -83,7 +83,7 @@ function Price({ plan, annual }) {
     return (
       <div className="py-4">
         <div className="flex items-baseline gap-1">
-          <span className="text-[2rem] font-extrabold tracking-tight text-espresso">
+          <span className="text-[1.65rem] sm:text-[2rem] font-extrabold tracking-tight text-espresso">
             {plan.enterprise ? "From " : ""}${perMonthEquivalent}
           </span>
           <span className="text-[13px] text-espresso-soft">/mo</span>
@@ -97,7 +97,7 @@ function Price({ plan, annual }) {
   return (
     <div className="py-4">
       <div className="flex items-baseline gap-1">
-        <span className="text-[2rem] font-extrabold tracking-tight text-espresso">
+        <span className="text-[1.65rem] sm:text-[2rem] font-extrabold tracking-tight text-espresso">
           {plan.enterprise ? "From " : ""}${plan.monthly}
         </span>
         <span className="text-[13px] text-espresso-soft">/mo</span>
@@ -127,10 +127,10 @@ export default function Pricing({ onBookDemo }) {
               Start with the essentials and scale as your restaurant grows. No hidden fees.
             </p>
           </Reveal>
-          <Reveal delay={100} className="mt-6 flex justify-center">
+          <Reveal delay={100} className="mt-6 flex justify-center px-1">
             <button
               onClick={() => setAnnual((a) => !a)}
-              className={`inline-flex items-center gap-2.5 rounded-full pl-1.5 pr-5 py-1.5 text-[12.5px] font-semibold transition-all border shadow-soft ${
+              className={`inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 rounded-full pl-1.5 pr-4 sm:pr-5 py-1.5 text-[11.5px] sm:text-[12.5px] font-semibold transition-all border shadow-soft max-w-full ${
                 annual
                   ? "bg-terracotta text-white border-terracotta"
                   : "bg-white text-terracotta border-espresso/10 hover:border-terracotta/30"
@@ -160,7 +160,7 @@ export default function Pricing({ onBookDemo }) {
                 className={`relative bg-white rounded-2xl h-full flex flex-col transition-all duration-300 overflow-hidden ${
                   plan.popular
                     ? "border-2 border-terracotta shadow-lift lg:-translate-y-1 ring-4 ring-terracotta/10"
-                    : "border border-espresso/8 shadow-soft hover:shadow-card hover:-translate-y-0.5"
+                    : "border border-espresso/8 shadow-soft md:hover:shadow-card md:hover:-translate-y-0.5"
                 }`}
               >
                 {plan.popular ? (
@@ -171,7 +171,7 @@ export default function Pricing({ onBookDemo }) {
                   <div className="h-2 bg-gradient-to-r from-cream-dark via-nude/30 to-cream-dark" aria-hidden />
                 )}
 
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-5 sm:p-6 flex flex-col flex-1">
                   <h3 className="text-[17px] font-extrabold text-espresso">{plan.name}</h3>
                   <p className="text-[12px] text-espresso-soft mt-0.5 mb-1">{plan.tagline}</p>
 

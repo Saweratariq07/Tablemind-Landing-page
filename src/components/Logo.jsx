@@ -21,7 +21,7 @@ export default function Logo({ size = "md", dark = false }) {
   const s = sizes[size];
 
   return (
-    <div className="flex items-center gap-2 select-none">
+    <div className="flex items-center gap-2 select-none min-w-0">
       {failed ? (
         <LogoSvg size={s.box} />
       ) : (
@@ -33,7 +33,7 @@ export default function Logo({ size = "md", dark = false }) {
           onError={() => setFailed(true)}
         />
       )}
-      <span className={`font-extrabold ${s.text} ${dark ? "text-white" : "text-espresso"} tracking-tight`}>
+      <span className={`font-extrabold ${s.text} ${dark ? "text-white" : "text-espresso"} tracking-tight truncate`}>
         TableMind<span className="text-terracotta">.co</span>
       </span>
     </div>

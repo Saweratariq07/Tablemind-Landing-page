@@ -66,7 +66,7 @@ export function POSScreen({ className = "" }) {
         </div>
       </div>
 
-      <div className="flex w-[70px] flex-shrink-0 flex-col border-l border-espresso/8 bg-white p-2">
+      <div className="hidden sm:flex w-[70px] flex-shrink-0 flex-col border-l border-espresso/8 bg-white p-2">
         <div className="text-[7px] font-extrabold leading-tight">Takeaway</div>
         <div className="mb-2 text-[5px] text-espresso-soft">Server: Kisame</div>
         <div className="flex items-center justify-between border-b border-espresso/8 py-1 text-[6px]">

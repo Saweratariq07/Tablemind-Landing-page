@@ -23,14 +23,14 @@ export default function Features() {
         <Reveal as="h2" className="text-center text-[1.6rem] sm:text-[1.9rem] font-extrabold text-espresso mb-10 sm:mb-12">
           Everything you need. All in one platform.
         </Reveal>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-6">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-6 min-w-0">
           {FEATURES.map(({ Preview, title, desc }, i) => (
             <Reveal
               key={title}
               delay={i * 80}
               className={`lg:col-span-2 ${i === 3 ? "lg:col-start-2" : ""}`}
             >
-              <div className="bg-white rounded-2xl border border-espresso/8 p-4 h-full hover:shadow-card hover:-translate-y-0.5 transition-all duration-300">
+              <div className="bg-white rounded-2xl border border-espresso/8 p-4 h-full min-w-0 overflow-hidden hover:shadow-card hover:-translate-y-0.5 transition-all duration-300">
                 <Preview />
                 <h3 className="text-[14px] font-bold text-espresso mb-1.5">{title}</h3>
                 <p className="text-[12.5px] text-espresso-soft leading-relaxed">{desc}</p>

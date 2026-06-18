@@ -58,7 +58,7 @@ export default function Footer() {
             <h4 className="text-[11px] font-bold uppercase tracking-widest text-cream/50 mb-4">Connect</h4>
             <a
               href="mailto:Tablemindhq@hotmail.com"
-              className="inline-flex items-center gap-1.5 text-[13.5px] font-medium text-cream/80 hover:text-white transition-colors mb-5"
+              className="inline-flex items-start sm:items-center gap-1.5 text-[13px] sm:text-[13.5px] font-medium text-cream/80 hover:text-white transition-colors mb-5 break-all"
             >
               Tablemindhq@hotmail.com
               <ArrowUpRight size={14} />

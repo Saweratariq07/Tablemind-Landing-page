@@ -54,11 +54,11 @@ export default function DemoModal({ open, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] bg-espresso/50 flex items-center justify-center p-4 animate-[fadeUp_0.2s_ease]"
+      className="fixed inset-0 z-[100] bg-espresso/50 flex items-end sm:items-center justify-center p-4 pb-[max(1rem,env(safe-area-inset-bottom))] animate-[fadeUp_0.2s_ease]"
       onClick={handleClose}
     >
       <div
-        className="bg-white rounded-2xl w-full max-w-md shadow-lift relative animate-[fadeUp_0.25s_ease]"
+        className="bg-white rounded-2xl sm:rounded-2xl rounded-b-none sm:rounded-b-2xl w-full max-w-md max-h-[90dvh] overflow-y-auto shadow-lift relative animate-[fadeUp_0.25s_ease]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -70,7 +70,7 @@ export default function DemoModal({ open, onClose }) {
         </button>
 
         {!submitted ? (
-          <div className="p-7 sm:p-8">
+          <div className="p-6 sm:p-8">
             <div className="w-11 h-11 rounded-xl bg-terracotta-pale text-terracotta flex items-center justify-center mb-4">
               <CalendarCheck size={20} />
             </div>
