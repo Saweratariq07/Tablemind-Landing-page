@@ -5,28 +5,32 @@ module.exports = {
     extend: {
       colors: {
         cream: {
-          DEFAULT: "#F7F2EA",
-          dark: "#EEE5D6",
-          darker: "#E2D4BD",
+          DEFAULT: "#FFFFFF",
+          dark: "#F9FAFB",
+          darker: "#F3F4F6",
         },
         espresso: {
-          DEFAULT: "#2C1810",
-          light: "#4A2C1A",
-          soft: "#6B4C3A",
+          DEFAULT: "#1A1A1A",
+          light: "#374151",
+          soft: "#4B5563",
         },
         terracotta: {
-          DEFAULT: "#C0452A",
-          light: "#D4604A",
-          dark: "#A03A22",
-          pale: "#FBEAE5",
+          DEFAULT: "#FF5C1A",
+          light: "#FF7A45",
+          dark: "#D94A1F",
+          pale: "#FFF7ED",
         },
         nude: {
-          DEFAULT: "#D4B896",
-          light: "#E8D5BE",
+          DEFAULT: "#E5E7EB",
+          light: "#F3F4F6",
         },
         ok: {
-          DEFAULT: "#2E7D44",
-          pale: "#E8F4EA",
+          DEFAULT: "#16A34A",
+          pale: "#F0FFF4",
+        },
+        problem: {
+          DEFAULT: "#EF4444",
+          pale: "#FFF5F5",
         },
       },
       fontFamily: {
@@ -37,10 +41,10 @@ module.exports = {
         xl2: "1.25rem",
       },
       boxShadow: {
-        soft: "0 2px 10px rgba(44,24,16,0.06)",
-        card: "0 4px 24px rgba(44,24,16,0.08)",
-        lift: "0 12px 40px rgba(44,24,16,0.14)",
-        device: "0 20px 50px rgba(44,24,16,0.18)",
+        soft: "0 2px 10px rgba(0,0,0,0.06)",
+        card: "0 4px 24px rgba(0,0,0,0.08)",
+        lift: "0 12px 40px rgba(0,0,0,0.12)",
+        device: "0 20px 50px rgba(0,0,0,0.15)",
       },
       keyframes: {
         fadeUp: {

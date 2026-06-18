@@ -114,8 +114,8 @@ export default function Pricing({ onBookDemo }) {
   const [annual, setAnnual] = useState(false);
 
   return (
-    <section id="pricing" className="relative px-5 sm:px-8 py-16 sm:py-20 bg-cream-dark/50 overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(192,69,42,0.06),transparent_55%)]" aria-hidden />
+    <section id="pricing" className="relative px-5 sm:px-8 py-16 sm:py-20 bg-cream-dark overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,92,26,0.06),transparent_55%)]" aria-hidden />
 
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
@@ -157,10 +157,10 @@ export default function Pricing({ onBookDemo }) {
           {PLANS.map((plan, i) => (
             <Reveal key={plan.name} delay={i * 90} className="h-full">
               <div
-                className={`relative bg-white rounded-2xl h-full flex flex-col transition-all duration-300 overflow-hidden ${
+                className={`relative rounded-2xl h-full flex flex-col transition-all duration-300 overflow-hidden ${
                   plan.popular
-                    ? "border-2 border-terracotta shadow-lift lg:-translate-y-1 ring-4 ring-terracotta/10"
-                    : "border border-espresso/8 shadow-soft md:hover:shadow-card md:hover:-translate-y-0.5"
+                    ? "bg-terracotta-pale border-2 border-terracotta shadow-lift lg:-translate-y-1 ring-4 ring-terracotta/10"
+                    : "bg-white border border-espresso/8 shadow-soft md:hover:shadow-card md:hover:-translate-y-0.5"
                 }`}
               >
                 {plan.popular ? (
@@ -168,7 +168,7 @@ export default function Pricing({ onBookDemo }) {
                     Most Popular
                   </div>
                 ) : (
-                  <div className="h-2 bg-gradient-to-r from-cream-dark via-nude/30 to-cream-dark" aria-hidden />
+                  <div className="h-2 bg-gradient-to-r from-cream-dark via-nude to-cream-dark" aria-hidden />
                 )}
 
                 <div className="p-5 sm:p-6 flex flex-col flex-1">

@@ -22,32 +22,32 @@ const SOLUTIONS = [
 
 export default function ProblemSolution() {
   return (
-    <section id="how-it-works" className="px-5 sm:px-8 py-10 sm:py-12">
+    <section id="how-it-works" className="px-5 sm:px-8 py-10 sm:py-12 bg-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-5">
         <Reveal>
-          <div className="bg-terracotta-pale rounded-2xl p-7 sm:p-8 h-full relative overflow-hidden">
+          <div className="bg-problem-pale rounded-2xl p-7 sm:p-8 h-full relative overflow-hidden border border-problem/10">
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 rounded-lg bg-terracotta/15 text-terracotta flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-problem/15 text-problem flex items-center justify-center">
                 <Lightbulb size={17} />
               </div>
-              <h3 className="text-[17px] font-extrabold text-terracotta">The Problem</h3>
+              <h3 className="text-[17px] font-extrabold text-problem">The Problem</h3>
             </div>
             <ul className="space-y-3.5">
               {PROBLEMS.map((p) => (
                 <li key={p} className="flex items-start gap-2.5">
-                  <span className="w-4 h-4 rounded-full bg-terracotta/15 text-terracotta flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="w-4 h-4 rounded-full bg-problem/15 text-problem flex items-center justify-center flex-shrink-0 mt-0.5">
                     <X size={10} strokeWidth={3} />
                   </span>
                   <span className="text-[13.5px] text-espresso-soft leading-snug">{p}</span>
                 </li>
               ))}
             </ul>
-            <Frown size={72} className="absolute -bottom-2 -right-2 opacity-[0.07] select-none text-terracotta" strokeWidth={1.5} />
+            <Frown size={72} className="absolute -bottom-2 -right-2 opacity-[0.07] select-none text-problem" strokeWidth={1.5} />
           </div>
         </Reveal>
 
         <Reveal delay={100}>
-          <div className="bg-ok-pale rounded-2xl p-7 sm:p-8 h-full relative overflow-hidden">
+          <div className="bg-ok-pale rounded-2xl p-7 sm:p-8 h-full relative overflow-hidden border border-ok/10">
             <div className="flex items-center gap-2.5 mb-5">
               <div className="w-8 h-8 rounded-lg bg-ok/15 text-ok flex items-center justify-center">
                 <CheckCircle2 size={17} />

@@ -16,7 +16,7 @@ export default function HeroDeviceShowcase() {
         src="/hero-devices.png"
         srcSet="/hero-devices.png 1x, /hero-devices.png 2x"
         alt="TableMind on laptop, tablet, phone, and kitchen display"
-        className="relative h-full w-full object-contain object-center drop-shadow-[0_20px_40px_rgba(44,24,16,0.18)] sm:drop-shadow-[0_28px_56px_rgba(44,24,16,0.22)] animate-floatSlow select-none max-w-full"
+        className="relative h-full w-full object-contain object-center drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)] sm:drop-shadow-[0_28px_56px_rgba(0,0,0,0.16)] animate-floatSlow select-none max-w-full"
         width={2048}
         height={1359}
         loading="eager"

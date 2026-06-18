@@ -78,7 +78,7 @@ export function DashboardScreen({ className = "" }) {
               ))}
             </div>
             <svg viewBox="0 0 100 26" className="h-9 w-full rounded bg-cream">
-              <polyline points="6,19 18,17 30,20 42,14 54,15 66,9 78,12 94,5" fill="none" stroke="#C0452A" strokeWidth="2" />
+              <polyline points="6,19 18,17 30,20 42,14 54,15 66,9 78,12 94,5" fill="none" stroke="#FF5C1A" strokeWidth="2" />
             </svg>
           </div>
         </div>
