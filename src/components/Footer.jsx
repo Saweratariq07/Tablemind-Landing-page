@@ -57,7 +57,7 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <h4 className="text-[11px] font-bold uppercase tracking-widest text-cream/50 mb-4">Connect</h4>
             <a
-              href="mailto:hello@tablemind.co"
+              href="mailto:Tablemindhq@hotmail.com"
               className="inline-flex items-center gap-1.5 text-[13.5px] font-medium text-cream/80 hover:text-white transition-colors mb-5"
             >
               hello@tablemind.co
