@@ -60,7 +60,7 @@ export default function Footer() {
               href="mailto:Tablemindhq@hotmail.com"
               className="inline-flex items-center gap-1.5 text-[13.5px] font-medium text-cream/80 hover:text-white transition-colors mb-5"
             >
-              hello@tablemind.co
+              Tablemindhq@hotmail.com
               <ArrowUpRight size={14} />
             </a>
             <div className="flex items-center gap-2.5">
