@@ -32,9 +32,6 @@ export default function Footer() {
             <p className="mt-4 text-[13.5px] text-cream/70 leading-relaxed max-w-sm">
               AI-powered restaurant operations — smarter orders, faster service, less waste, and full visibility across your business.
             </p>
-            <span className="inline-flex items-center gap-1.5 mt-5 bg-terracotta/20 text-terracotta-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
-              Made for Ghana
-            </span>
           </div>
 
           {/* Navigation */}
@@ -57,10 +54,10 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <h4 className="text-[11px] font-bold uppercase tracking-widest text-cream/50 mb-4">Connect</h4>
             <a
-              href="mailto:Tablemindhq@hotmail.com"
+              href="mailto:hello@tablemind.co"
               className="inline-flex items-start sm:items-center gap-1.5 text-[13px] sm:text-[13.5px] font-medium text-cream/80 hover:text-white transition-colors mb-5 break-all"
             >
-              Tablemindhq@hotmail.com
+              hello@tablemind.co
               <ArrowUpRight size={14} />
             </a>
             <div className="flex items-center gap-2.5">

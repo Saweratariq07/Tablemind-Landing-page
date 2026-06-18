@@ -1,20 +1,23 @@
 const WEB3FORMS_URL = "https://api.web3forms.com/submit";
 
 /**
- * Sends a lead notification to the client inbox (configured in Web3Forms).
- * The submitter's email is set as reply-to so the client can reply directly.
+ * Sends a lead notification via Web3Forms.
+ * Each access key is registered to a specific inbox in the Web3Forms dashboard.
+ * The submitter's email is used as reply-to so the client can respond directly.
  */
-export async function submitLead({ name, email, subject, message, fields = {} }) {
-  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+export async function submitLead({ accessKey, name, email, subject, message, fields = {} }) {
+  const key =
+    accessKey ||
+    import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
-  if (!accessKey) {
+  if (!key) {
     throw new Error(
-      "Email is not configured yet. Add VITE_WEB3FORMS_ACCESS_KEY to your .env file."
+      "Email is not configured yet. Add Web3Forms access keys to your .env file."
     );
   }
 
   const body = {
-    access_key: accessKey,
+    access_key: key,
     subject,
     from_name: name,
     name,
@@ -64,6 +67,9 @@ export async function submitDemoRequest(form) {
     .join("\n");
 
   return submitLead({
+    accessKey:
+      import.meta.env.VITE_WEB3FORMS_DEMO_KEY ||
+      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
     name: form.name,
     email: form.email,
     subject: `[TableMind] Demo request — ${form.restaurant}`,
@@ -89,6 +95,9 @@ export async function submitWaitlistSignup(form) {
   ].join("\n");
 
   return submitLead({
+    accessKey:
+      import.meta.env.VITE_WEB3FORMS_WAITLIST_KEY ||
+      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
     name: form.name,
     email: form.email,
     subject: `[TableMind] Waitlist signup — ${form.restaurant}`,
