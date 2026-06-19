@@ -26,7 +26,7 @@ export default function Logo({ size = "md", dark = false }) {
         <LogoSvg size={s.box} />
       ) : (
         <img
-          src="/dashboard-logo.png"
+          src="/new-logo.png"
           alt="TableMind Logo"
           className="object-contain rounded-md"
           style={{ width: s.box, height: s.box }}

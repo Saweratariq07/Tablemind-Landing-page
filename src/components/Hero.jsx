@@ -15,12 +15,12 @@ export default function Hero({ onBookDemo, onJoinWaitlist }) {
       {/* Restaurant background */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         <img
-          src="/hero-restaurant.jpg"
+          src="/hero-restaurant-olive.png"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover object-center scale-105 blur-[2px]"
+          className="absolute inset-0 w-full h-full object-cover object-center scale-[1.03]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-cream via-cream/95 to-cream/75 lg:to-cream/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-cream/95 via-transparent to-cream/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cream via-cream/90 to-cream/55 lg:to-cream/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-cream/95 via-cream/30 to-terracotta/20" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-8 grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-6 xl:gap-8 items-center">
