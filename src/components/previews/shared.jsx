@@ -35,7 +35,7 @@ export const LogoWithFallback = ({ className = "h-6 w-auto" }) => {
 
   return (
     <img
-      src="/Dashboard logo.png"
+      src="/dashboard-logo.png"
       alt="TableMind"
       className={`object-contain ${className}`}
       onError={() => setFailed(true)}
