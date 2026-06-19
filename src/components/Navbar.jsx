@@ -36,8 +36,8 @@ export default function Navbar({ onBookDemo }) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-[env(safe-area-inset-top)] ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-soft border-b border-espresso/5"
-          : "bg-white/90 backdrop-blur-md border-b border-espresso/5"
+          ? "bg-cream/95 backdrop-blur-md shadow-soft border-b border-espresso/5"
+          : "bg-cream/90 backdrop-blur-md border-b border-espresso/5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8 h-[64px] sm:h-[72px] flex items-center justify-between gap-3">

@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #FFFFFF;
+  background-color: #F9F9F5;
   color: #1A1A1A;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -29,12 +29,12 @@ body {
 
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #E5E7EB; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #FF5C1A; }
+::-webkit-scrollbar-thumb { background: #E5E2D8; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #6C7A4D; }
 
 /* Focus visibility for accessibility */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 2px solid #FF5C1A;
+  outline: 2px solid #6C7A4D;
   outline-offset: 2px;
 }
 

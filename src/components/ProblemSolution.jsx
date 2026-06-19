@@ -22,7 +22,7 @@ const SOLUTIONS = [
 
 export default function ProblemSolution() {
   return (
-    <section id="how-it-works" className="px-5 sm:px-8 py-10 sm:py-12 bg-white">
+    <section id="how-it-works" className="px-5 sm:px-8 py-10 sm:py-12 bg-cream">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-5">
         <Reveal>
           <div className="bg-problem-pale rounded-2xl p-7 sm:p-8 h-full relative overflow-hidden border border-problem/10">

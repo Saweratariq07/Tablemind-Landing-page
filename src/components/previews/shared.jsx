@@ -18,7 +18,7 @@ export const QR_MENU_ITEMS = [
 function LogoSvg({ className = "h-6 w-6" }) {
   return (
     <svg viewBox="0 0 32 32" className={className} aria-hidden>
-      <rect width="32" height="32" rx="6" fill="#FF5C1A" />
+      <rect width="32" height="32" rx="6" fill="#6C7A4D" />
       <text x="16" y="21" textAnchor="middle" fill="white" fontSize="14" fontWeight="800" fontFamily="Inter, sans-serif">
         T
       </text>

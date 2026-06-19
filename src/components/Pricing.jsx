@@ -115,7 +115,7 @@ export default function Pricing({ onBookDemo }) {
 
   return (
     <section id="pricing" className="relative px-5 sm:px-8 py-16 sm:py-20 bg-cream-dark overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,92,26,0.06),transparent_55%)]" aria-hidden />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(108,122,77,0.06),transparent_55%)]" aria-hidden />
 
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">

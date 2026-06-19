@@ -1,48 +1,65 @@
 const WEB3FORMS_URL = "https://api.web3forms.com/submit";
 
-/**
- * Sends a lead notification via Web3Forms.
- * Each access key is registered to a specific inbox in the Web3Forms dashboard.
- * The submitter's email is used as reply-to so the client can respond directly.
- */
-export async function submitLead({ accessKey, name, email, subject, message, fields = {} }) {
-  const key =
-    accessKey ||
-    import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-
-  if (!key) {
+function requireAccessKey(key, formLabel) {
+  if (!key || String(key).includes("your_")) {
     throw new Error(
-      "Email is not configured yet. Add Web3Forms access keys to your .env file."
+      `${formLabel} is not configured yet. Please contact us at hello@tablemind.co.`
     );
   }
+  return key;
+}
+
+/**
+ * Sends a lead notification via Web3Forms.
+ * Waitlist → hello@tablemind.co | Demo → demo@tablemind.co
+ */
+export async function submitLead({ accessKey, name, email, subject, message, fields = {} }) {
+  const key = requireAccessKey(accessKey, "This form");
 
   const body = {
     access_key: key,
     subject,
-    from_name: name,
+    from_name: "TableMind Website",
     name,
     email,
+    replyto: email,
     message,
-    botcheck: "",
+    botcheck: false,
     ...fields,
   };
 
-  const res = await fetch(WEB3FORMS_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Accept: "application/json" },
-    body: JSON.stringify(body),
-  });
+  let res;
+  try {
+    res = await fetch(WEB3FORMS_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(body),
+    });
+  } catch {
+    throw new Error("Network error. Check your connection and try again.");
+  }
 
   const data = await res.json().catch(() => ({}));
 
   if (!res.ok || !data.success) {
-    throw new Error(data.message || "Could not send your request. Please try again.");
+    const msg = data.message || data.body?.message;
+    if (msg?.toLowerCase().includes("domain")) {
+      throw new Error(
+        "This form is not yet approved for tablemind.co. Please email hello@tablemind.co and we'll help you submit."
+      );
+    }
+    throw new Error(msg || "Could not send your request. Please try again or email hello@tablemind.co.");
   }
 
   return data;
 }
 
 export async function submitDemoRequest(form) {
+  const accessKey = requireAccessKey(
+    import.meta.env.VITE_WEB3FORMS_DEMO_KEY,
+    "Demo booking"
+  );
+
   const dateLabel = form.date
     ? new Date(form.date).toLocaleDateString("en-US", {
         weekday: "long",
@@ -67,9 +84,7 @@ export async function submitDemoRequest(form) {
     .join("\n");
 
   return submitLead({
-    accessKey:
-      import.meta.env.VITE_WEB3FORMS_DEMO_KEY ||
-      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+    accessKey,
     name: form.name,
     email: form.email,
     subject: `[TableMind] Demo request — ${form.restaurant}`,
@@ -83,6 +98,11 @@ export async function submitDemoRequest(form) {
 }
 
 export async function submitWaitlistSignup(form) {
+  const accessKey = requireAccessKey(
+    import.meta.env.VITE_WEB3FORMS_WAITLIST_KEY,
+    "Waitlist signup"
+  );
+
   const message = [
     "New waitlist signup from the TableMind website.",
     "",
@@ -95,9 +115,7 @@ export async function submitWaitlistSignup(form) {
   ].join("\n");
 
   return submitLead({
-    accessKey:
-      import.meta.env.VITE_WEB3FORMS_WAITLIST_KEY ||
-      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+    accessKey,
     name: form.name,
     email: form.email,
     subject: `[TableMind] Waitlist signup — ${form.restaurant}`,

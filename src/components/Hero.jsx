@@ -11,7 +11,7 @@ const PILLS = [
 
 export default function Hero({ onBookDemo, onJoinWaitlist }) {
   return (
-    <section id="hero" className="relative pt-[88px] pb-12 sm:pt-[140px] sm:pb-20 overflow-hidden bg-white">
+    <section id="hero" className="relative pt-[88px] pb-12 sm:pt-[140px] sm:pb-20 overflow-hidden bg-cream">
       {/* Restaurant background */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         <img
@@ -19,13 +19,13 @@ export default function Hero({ onBookDemo, onJoinWaitlist }) {
           alt=""
           className="absolute inset-0 w-full h-full object-cover object-center scale-105 blur-[2px]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/75 lg:to-white/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-transparent to-white/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cream via-cream/95 to-cream/75 lg:to-cream/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-cream/95 via-transparent to-cream/50" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-8 grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-6 xl:gap-8 items-center">
         {/* Left: copy */}
-        <div className="animate-[fadeUp_0.7s_ease] lg:bg-transparent bg-white/80 backdrop-blur-sm rounded-2xl lg:p-0 p-5 sm:p-6 min-w-0">
+        <div className="animate-[fadeUp_0.7s_ease] lg:bg-transparent bg-cream/80 backdrop-blur-sm rounded-2xl lg:p-0 p-5 sm:p-6 min-w-0">
           <h1 className="text-[1.75rem] min-[400px]:text-[2rem] sm:text-[2.6rem] lg:text-[2.85rem] font-extrabold leading-[1.12] tracking-tight text-espresso max-w-[520px]">
             Run your restaurant with more{" "}
             <span className="text-terracotta">clarity,</span>{" "}
@@ -45,7 +45,7 @@ export default function Hero({ onBookDemo, onJoinWaitlist }) {
             </button>
             <button
               onClick={onJoinWaitlist}
-              className="inline-flex w-full min-[400px]:w-auto items-center justify-center gap-2 border-2 border-terracotta text-terracotta hover:bg-terracotta-pale font-semibold text-[14px] px-6 py-3.5 rounded-full transition-colors bg-white/60 min-h-[48px]"
+              className="inline-flex w-full min-[400px]:w-auto items-center justify-center gap-2 border-2 border-terracotta text-terracotta hover:bg-terracotta-pale font-semibold text-[14px] px-6 py-3.5 rounded-full transition-colors bg-cream/60 min-h-[48px]"
             >
               Join the Waitlist
             </button>

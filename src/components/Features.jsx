@@ -18,7 +18,7 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section id="product" className="px-5 sm:px-8 py-16 sm:py-20 bg-white">
+    <section id="product" className="px-5 sm:px-8 py-16 sm:py-20 bg-cream">
       <div className="max-w-7xl mx-auto">
         <Reveal as="h2" className="text-center text-[1.6rem] sm:text-[1.9rem] font-extrabold text-espresso mb-10 sm:mb-12">
           Everything you need. All in one platform.

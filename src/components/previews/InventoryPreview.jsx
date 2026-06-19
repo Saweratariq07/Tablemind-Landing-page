@@ -21,7 +21,7 @@ export function InventoryScreen({ className = "" }) {
 
       <div className="mb-2 grid grid-cols-2 gap-1.5">
         {[
-          { label: "Low Stock", value: "3 items", icon: AlertTriangle, color: "text-[#D1842B]", bg: "bg-[#FFF4DD]" },
+          { label: "Low Stock", value: "3 items", icon: AlertTriangle, color: "text-terracotta-dark", bg: "bg-terracotta-pale" },
           { label: "Out of Stock", value: "1 item", icon: ShieldAlert, color: "text-terracotta", bg: "bg-terracotta-pale" },
           { label: "Waste Today", value: "GHC 105", icon: Trash2, color: "text-espresso-soft", bg: "bg-white" },
           { label: "Menu Impact", value: "7 items", icon: Package, color: "text-[#4A90D9]", bg: "bg-[#EEF4FC]" },
