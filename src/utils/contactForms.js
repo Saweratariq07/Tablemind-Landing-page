@@ -2,10 +2,19 @@ const WEB3FORMS_URL = ["https://api", "web3forms", "com/submit"].join(".");
 const ACCESS_KEY_FIELD = ["access", "key"].join("_");
 
 function requireAccessKey(key, formLabel) {
-  if (!key || String(key).includes("your_")) {
+  let normalizedKey = key ? String(key).trim() : "";
+
+  if (
+    (normalizedKey.startsWith("\"") && normalizedKey.endsWith("\"")) ||
+    (normalizedKey.startsWith("'") && normalizedKey.endsWith("'"))
+  ) {
+    normalizedKey = normalizedKey.slice(1, -1).trim();
+  }
+
+  if (!normalizedKey || normalizedKey.includes("your_")) {
     throw new Error(`${formLabel} is not configured yet. Please contact us at hello@tablemind.co.`);
   }
-  return key;
+  return normalizedKey;
 }
 
 async function sendContactForm({ accessKey, name, email, subject, message, fields = {} }) {
