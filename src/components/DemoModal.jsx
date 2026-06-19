@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { X, CalendarCheck, CheckCircle2, Loader2 } from "lucide-react";
-import { submitDemoRequest } from "../lib/submitLead";
+import { submitDemoRequest } from "../utils/contactForms";
 
 const empty = { name: "", email: "", restaurant: "", date: "", message: "" };
 

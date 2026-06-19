@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Users2, ArrowRight, CalendarCheck, CheckCircle2, Loader2 } from "lucide-react";
 import Reveal from "./Reveal";
-import { submitWaitlistSignup } from "../lib/submitLead";
+import { submitWaitlistSignup } from "../utils/contactForms";
 
 const empty = { name: "", email: "", restaurant: "", location: "" };
 
