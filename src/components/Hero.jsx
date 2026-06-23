@@ -1,6 +1,8 @@
 import React from "react";
-import { ArrowRight, ListChecks, Trash2, Zap, BarChart3 } from "lucide-react";
+import { ArrowRight, ExternalLink, ListChecks, Trash2, Zap, BarChart3 } from "lucide-react";
 import HeroDeviceShowcase from "./hero/HeroDeviceShowcase";
+
+const DEMO_URL = "https://tablemind-demo.vercel.app/";
 
 const PILLS = [
   { icon: ListChecks, label: "Smarter Orders" },
@@ -49,6 +51,14 @@ export default function Hero({ onBookDemo, onJoinWaitlist }) {
             >
               Join the Waitlist
             </button>
+            <a
+              href={DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full min-[400px]:w-auto items-center justify-center gap-2 bg-white border-2 border-espresso/15 text-espresso hover:bg-cream-dark font-semibold text-[14px] px-6 py-3.5 rounded-full transition-colors shadow-soft min-h-[48px]"
+            >
+              View Demo <ExternalLink size={15} />
+            </a>
           </div>
 
           <div className="mt-8 sm:mt-9 grid grid-cols-2 gap-3 sm:flex sm:flex-nowrap sm:items-center sm:gap-4">

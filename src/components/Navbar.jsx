@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, ExternalLink } from "lucide-react";
 import Logo from "./Logo";
+
+const DEMO_URL = "https://tablemind-demo.vercel.app/";
 
 const LINKS = [
   { label: "Product", id: "product" },
@@ -62,7 +64,15 @@ export default function Navbar({ onBookDemo }) {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href={DEMO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-espresso/80 hover:text-espresso transition-colors"
+          >
+            View Demo <ExternalLink size={14} />
+          </a>
           <button
             onClick={onBookDemo}
             className="inline-flex items-center gap-1.5 bg-terracotta hover:bg-terracotta-dark text-white text-[13.5px] font-semibold px-5 py-2.5 rounded-full transition-colors shadow-card"
@@ -87,12 +97,21 @@ export default function Navbar({ onBookDemo }) {
               {l.label}
             </button>
           ))}
+          <a
+            href={DEMO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="mt-3 inline-flex items-center justify-center gap-1.5 border-2 border-espresso/15 text-espresso text-[14px] font-semibold px-5 py-3 rounded-full"
+          >
+            View Demo <ExternalLink size={14} />
+          </a>
           <button
             onClick={() => {
               setOpen(false);
               onBookDemo();
             }}
-            className="mt-3 inline-flex items-center justify-center gap-1.5 bg-terracotta text-white text-[14px] font-semibold px-5 py-3 rounded-full shadow-card"
+            className="mt-2 inline-flex items-center justify-center gap-1.5 bg-terracotta text-white text-[14px] font-semibold px-5 py-3 rounded-full shadow-card"
           >
             Book a Demo <ArrowRight size={14} />
           </button>
